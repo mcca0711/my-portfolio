@@ -99,6 +99,34 @@
             border-color: #ff00ff;
             pointer-events: none;
         }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form textarea {
+            min-height: 150px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -114,39 +142,44 @@
         <a href="contact.html" class="nav-button active">📧 Contact</a>
     </nav>
     <div class="container">
-        <marquee behavior="alternate" scrollamount="10">
+        <section class="contact-section">
             <h1>Get In Touch!</h1>
-        </marquee>
-
-        <div class="contact-form">
+            
             <form action="https://formsubmit.co/398bbe375341c1f1c25d1d7f3c83368b" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
-                <input type="text" name="_honey" style="display: none">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://mcca0711.github.io/my-portfolio/contact.html">
-                <button type="submit" class="submit-btn">Send Message! 📨</button>
-            </form>
-        </div>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
 
-        <div class="social-links">
+                <!-- Anti-spam and configuration -->
+                <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://mcca0711.github.io/my-portfolio/contact.html">
+                
+                <button type="submit">Send Message! 📨</button>
+            </form>
+
             <h2>Find Me On:</h2>
-            <a href="https://www.linkedin.com/in/mcmatt42/" target="_blank" class="button">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 20px; vertical-align: middle;"> 
-                LinkedIn
-            </a>
-            <a href="https://github.com/mcca0711" target="_blank" class="button">
-                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 20px; vertical-align: middle;"> 
-                GitHub
-            </a>
-            <a href="mailto:orbit9112@gmail.com" class="button">
-                <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" style="width: 20px; vertical-align: middle;"> 
-                Email
-            </a>
-        </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mcmatt42/" target="_blank" class="button">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 20px; vertical-align: middle;"> 
+                    LinkedIn
+                </a>
+                <a href="https://github.com/mcca0711" target="_blank" class="button">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 20px; vertical-align: middle;"> 
+                    GitHub
+                </a>
+                <a href="mailto:orbit9112@gmail.com" class="button">
+                    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" style="width: 20px; vertical-align: middle;"> 
+                    Email
+                </a>
+            </div>
+        </section>
     </div>
 </body>
 </html> 
