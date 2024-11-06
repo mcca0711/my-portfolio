@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - AI Solutions & Full-Stack Software Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .profile-section {
+            background: rgba(0, 0, 255, 0.2);
+            border: 3px solid #ff00ff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .skill-category {
+            background: rgba(255, 0, 255, 0.2);
+            border: 2px solid #00ff00;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .skill-bar {
+            background: rgba(255, 255, 255, 0.2);
+            height: 20px;
+            border: 2px solid #ff00ff;
+            border-radius: 10px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            background: linear-gradient(90deg, #ff00ff, #00ff00);
+            height: 100%;
+            animation: fillBar 2s ease-out forwards;
+        }
+
+        .blink-text {
+            animation: blink 1s infinite;
+            color: #00ff00;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .skill-tag {
+            background: #ff00ff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        .resume-button {
+            background: #ff00ff;
+            color: white;
+            padding: 15px 30px;
+            border: 3px solid #00ff00;
+            border-radius: 10px;
+            font-size: 1.2em;
+            margin: 20px auto;
+            display: inline-block;
+            transition: all 0.3s;
+            text-decoration: none;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        .resume-button:hover {
+            transform: scale(1.1);
+            background: #00ff00;
+            border-color: #ff00ff;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px #ff00ff,
+                           0 0 10px #ff00ff,
+                           0 0 15px #ff00ff;
+            }
+            to {
+                box-shadow: 0 0 10px #00ff00,
+                           0 0 20px #00ff00,
+                           0 0 30px #00ff00;
+            }
+        }
+
+        .resume-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+        }
+
+        .resume-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 90%;
+            background: white;
+            padding: 20px;
+            border: 5px solid #ff00ff;
+            box-shadow: 0 0 20px #00ff00;
+        }
+
+        .close-resume {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: #ff00ff;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .resume-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .download-resume {
+            position: absolute;
+            top: 10px;
+            right: 60px;
+            background: #ff00ff;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .download-resume:hover {
+            background: #00ff00;
+        }
+
+        .nav-bar {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .nav-button {
+            background: #ff00ff;
+            color: white;
+            padding: 10px;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+            width: 100px;
+        }
+
+        .nav-button:hover {
+            background: #00ff00;
+            border-color: #ff00ff;
+            transform: scale(1.1);
+        }
+
+        .nav-button.active {
+            background: #00ff00;
+            border-color: #ff00ff;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Add this right after <body> tag -->
+<div class="background-decorations"></div>
+
+<!-- Add this right before closing </body> tag -->
+<script src="script.js"></script>
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-button">🏠 Home</a>
+        <a href="projects.html" class="nav-button">🚀 Projects</a>
+        <a href="about.html" class="nav-button active">👤 About</a>
+        <a href="contact.html" class="nav-button">📧 Contact</a>
+    </nav>
+    
+    <div class="container">
+        <marquee behavior="alternate" scrollamount="10">
+            <h1>About Me</h1>
+        </marquee>
+
+        <div class="profile-section">
+            <h2>⭐ EXECUTIVE SUMMARY ⭐</h2>
+            <p style="line-height: 1.6;">
+                Dynamic <span class="blink-text">AI Solutions  & Full-Stack Software Developer</span> with almost 3 years of experience in performance optimization,
+                security, and custom software solutions. Proven expertise in developing AI-driven applications,
+                project management, and enhancing operational efficiency. Holds <span class="blink-text">Secret Security Clearance</span>
+                and a solid foundation in full-stack development.
+            </p>
+        </div>
+
+        <div class="profile-section">
+            <h2>🚀 TECHNICAL SKILLS 🚀</h2>
+            
+            <div class="skill-category">
+                <h3>💻 Languages</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>🛠️ Tools & Frameworks</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Jira</span>
+                    <span class="skill-tag">Slack, Discord, MS Teams</span>
+                    <span class="skill-tag">Visual Studio</span>
+                    <span class="skill-tag">DevExpress</span>
+                    <span class="skill-tag">Cursor</span>
+                    <span class="skill-tag">PyCharm</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Scikit-Learn</span>
+                    <span class="skill-tag">Keras</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">Numpy</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">Streamlit</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>☁️ Cloud</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Azure</span>
+                    <span class="skill-tag">Google</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>🗄️ Databases</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">SQL Server</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Toad for Oracle</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">MongoDB</span>
+
+                </div>
+
+                <div class="skill-category">
+                    <h3>🗄️ DevOps & Automation</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+            </div>
+        </div>
+
+        <marquee>💫 Available for exciting AI and development projects! 💫</marquee>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+        <button onclick="openResume()" class="resume-button">
+            📄 View My Resume 📄
+        </button>
+    </div>
+
+    <div id="resumeModal" class="resume-modal">
+        <div class="resume-content">
+            <span class="close-resume" onclick="closeResume()">&times;</span>
+            <a href="assets/resume.pdf" download class="download-resume">⬇️ Download</a>
+            <iframe src="assets/resume.pdf" class="resume-iframe"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openResume() {
+            document.getElementById('resumeModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+
+        function closeResume() {
+            document.getElementById('resumeModal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        // Close modal when clicking outside of content
+        window.onclick = function(event) {
+            const modal = document.getElementById('resumeModal');
+            if (event.target == modal) {
+                closeResume();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeResume();
+            }
+        });
+    </script>
+</body>
+</html> 
