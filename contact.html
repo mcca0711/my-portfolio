@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-form {
+            background: rgba(0, 0, 255, 0.2);
+            padding: 20px;
+            border: 3px solid #ff00ff;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 500px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #ff00ff;
+            border-radius: 5px;
+            font-family: "Comic Sans MS", cursive;
+        }
+
+        .submit-btn {
+            background: #ff00ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-family: "Comic Sans MS", cursive;
+        }
+
+        .submit-btn:hover {
+            background: #00ff00;
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        .social-links {
+            margin: 30px 0;
+        }
+
+        .social-links .button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-links img {
+            transition: transform 0.3s;
+        }
+
+        .social-links .button:hover img {
+            transform: scale(1.2);
+        }
+
+        /* Add these navigation styles */
+        .nav-bar {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .nav-button {
+            background: #ff00ff;
+            color: white;
+            padding: 10px;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+            width: 100px;
+        }
+
+        .nav-button:hover {
+            background: #00ff00;
+            border-color: #ff00ff;
+            transform: scale(1.1);
+        }
+
+        .nav-button.active {
+            background: #00ff00;
+            border-color: #ff00ff;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Add this right after <body> tag -->
+<div class="background-decorations"></div>
+
+<!-- Add this right before closing </body> tag -->
+<script src="script.js"></script>
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-button">🏠 Home</a>
+        <a href="projects.html" class="nav-button">🚀 Projects</a>
+        <a href="about.html" class="nav-button">👤 About</a>
+        <a href="contact.html" class="nav-button active">📧 Contact</a>
+    </nav>
+    <div class="container">
+        <marquee behavior="alternate" scrollamount="10">
+            <h1>Get In Touch!</h1>
+        </marquee>
+
+        <div class="contact-form">
+            <form action="https://formsubmit.co/orbit9112@gmail.com" method="POST">
+                <!-- Honeypot -->
+                <input type="text" name="_honey" style="display:none">
+                
+                <!-- Disable Captcha -->
+                <input type="hidden" name="_captcha" value="false">
+                
+                <!-- Success Page -->
+                <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
+                
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Type Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message! 📨</button>
+            </form>
+        </div>
+
+        <div class="social-links">
+            <h2>Find Me On:</h2>
+            <a href="https://www.linkedin.com/in/mcmatt42/" target="_blank" class="button">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 20px; vertical-align: middle;"> 
+                LinkedIn
+            </a>
+            <a href="https://github.com/mcca0711" target="_blank" class="button">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 20px; vertical-align: middle;"> 
+                GitHub
+            </a>
+            <a href="mailto:orbit9112@gmail.com" class="button">
+                <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" style="width: 20px; vertical-align: middle;"> 
+                Email
+            </a>
+        </div>
+    </div>
+</body>
+</html> 

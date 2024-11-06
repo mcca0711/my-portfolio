@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .project-card {
+            background: rgba(0, 0, 255, 0.1);
+            border: 3px solid #ff00ff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+            border-color: #00ff00;
+        }
+
+        .project-card h2 {
+            color: #00ff00;
+            text-shadow: 2px 2px 4px rgba(0, 255, 0, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .project-card h3 {
+            color: #ff00ff;
+            margin: 15px 0 10px 0;
+        }
+
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: "🚀";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff00ff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px #ff00ff,
+                           0 0 10px #ff00ff;
+            }
+            to {
+                box-shadow: 0 0 10px #00ff00,
+                           0 0 20px #00ff00;
+            }
+        }
+
+        .project-card:nth-child(4) {  /* Target the NasaDay card */
+            background: linear-gradient(
+                rgba(0, 0, 255, 0.1),
+                rgba(128, 0, 128, 0.1)
+            );
+            border-image: linear-gradient(45deg, #ff00ff, #4b0082) 1;
+        }
+
+        .project-card:nth-child(4)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, 
+                rgba(255, 255, 255, 0.1) 0%, 
+                transparent 60%);
+            pointer-events: none;
+        }
+
+        .project-card:nth-child(4) .project-badge {
+            background: linear-gradient(45deg, #4b0082, #ff00ff);
+        }
+
+        .project-card:nth-child(4):hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.3),
+                        0 0 30px rgba(75, 0, 130, 0.2);
+        }
+
+        .github-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .github-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-button">🏠 Home</a>
+        <a href="projects.html" class="nav-button active">🚀 Projects</a>
+        <a href="about.html" class="nav-button">👤 About</a>
+        <a href="contact.html" class="nav-button">📧 Contact</a>
+    </nav>
+
+    <div class="container">
+        <marquee behavior="alternate" scrollamount="10">
+            <h1>My Projects!</h1>
+        </marquee>
+
+        <!-- Sustainability Shopping Assistant -->
+        <div class="project-card">
+            <span class="project-badge">Eco-Friendly</span>
+            <h2>🌱 Sustainability Shopping Assistant</h2>
+            <p><strong>Overview:</strong> This mobile application is designed as a pre-trip and in-store tool to help users make sustainable shopping choices. By scanning items on the spot or analyzing shopping lists beforehand, the app provides eco-friendly recommendations, guides sustainable purchase decisions, and displays environmental impact metrics for selected products. It uses a reasoning engine to enhance recommendation accuracy and incorporates a user-friendly interface to make sustainable shopping accessible and engaging.</p>
+            
+            <h3>Key Features:</h3>
+            <ul class="features-list">
+                <li>Real-time item scanning and pre-trip list analysis for sustainability insights.</li>
+                <li>Recommendations based on eco-friendly and low-impact alternatives.</li>
+                <li>A reasoning engine to enhance system recommendations.</li>
+                <li>Intuitive, accessible UI to guide users in making sustainable shopping choices.</li>
+            </ul>
+            <a href="https://github.com/mcca0711/sustainability-shopping-assistant" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>
+        </div>
+
+        <!-- Solar Panel Placement Optimizer -->
+        <div class="project-card">
+            <span class="project-badge">Clean Energy</span>
+            <h2>☀️ Solar Panel Placement Optimizer</h2>
+            <p><strong>Overview:</strong> This web-based tool assists users in identifying optimal locations for solar panel installations, aimed at maximizing efficiency and energy output. Leveraging minimal code and simple frameworks, this app is designed for quick and user-friendly access, suitable for individual homeowners and small businesses seeking to increase their use of renewable energy.</p>
+            
+            <h3>Key Features:</h3>
+            <ul class="features-list">
+                <li>Interactive user interface for selecting installation areas.</li>
+                <li>Calculation of energy potential based on location data and basic metrics.</li>
+                <li>Resource-light design for fast, simple use on various devices.</li>
+                <li>Built using only free resources and simple frameworks, emphasizing accessibility and cost-effectiveness.</li>
+            </ul>
+            <a href="https://github.com/mcca0711/solar-panel-optimizer" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>
+        </div>
+
+        <!-- Add this after the Solar Panel Placement Optimizer card -->
+        <div class="project-card">
+            <span class="project-badge">Space Tech</span>
+            <h2>🌌 NasaDay</h2>
+            <p><strong>Overview:</strong> NasaDay is an interactive web app that lets users explore NASA's vast collection of astronomy images. By selecting a specific date through a date picker, users can retrieve the Astronomy Picture of the Day (APOD) from NASA's API, complete with an image, detailed description, and other fascinating details. The app provides a user-friendly interface to easily browse daily space imagery and learn more about our universe.</p>
+            
+            <h3>Key Features:</h3>
+            <ul class="features-list">
+                <li>Date Picker Integration: Users can select any past date to view NASA's featured image for that day.</li>
+                <li>NASA APOD API Integration: Seamlessly retrieves high-quality images and descriptions from NASA's web servers.</li>
+                <li>Responsive Design: Optimized for various devices, making it easy to explore space images on both mobile and desktop.</li>
+            </ul>
+            <a href="https://github.com/mcca0711/NasaDay" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>
+        </div>
+
+    </div>
+</body>
+</html> 
