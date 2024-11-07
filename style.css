@@ -498,3 +498,57 @@ input, textarea {
     margin: 0;
     padding: 10px 0;
 }
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .nav-bar {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .nav-button {
+        width: auto;
+        min-width: 100px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    .project-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Fix for stretched images */
+    .container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Fix for contact buttons */
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .social-links .button {
+        width: 200px;  /* or whatever width looks good */
+        margin: 5px 0;
+    }
+}
