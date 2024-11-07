@@ -5,129 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .contact-form {
-            background: rgba(0, 0, 255, 0.2);
-            padding: 20px;
-            border: 3px solid #ff00ff;
-            border-radius: 10px;
-            margin: 20px auto;
-            max-width: 500px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            background: rgba(255, 255, 255, 0.9);
-            border: 2px solid #ff00ff;
-            border-radius: 5px;
-            font-family: "Comic Sans MS", cursive;
-        }
-
-        .submit-btn {
-            background: #ff00ff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-family: "Comic Sans MS", cursive;
-        }
-
-        .submit-btn:hover {
-            background: #00ff00;
-            animation: shake 0.5s;
-        }
-
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-
-        .social-links {
-            margin: 30px 0;
-        }
-
-        .social-links .button {
-            margin: 0 10px;
-            padding: 10px 20px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .social-links img {
-            transition: transform 0.3s;
-        }
-
-        .social-links .button:hover img {
-            transform: scale(1.2);
-        }
-
-        /* Add these navigation styles */
-        .nav-bar {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            z-index: 1000;
-        }
-
-        .nav-button {
-            background: #ff00ff;
-            color: white;
-            padding: 10px;
-            border: 2px solid #00ff00;
-            border-radius: 5px;
-            text-decoration: none;
-            text-align: center;
-            transition: all 0.3s;
-            width: 100px;
-        }
-
-        .nav-button:hover {
-            background: #00ff00;
-            border-color: #ff00ff;
-            transform: scale(1.1);
-        }
-
-        .nav-button.active {
-            background: #00ff00;
-            border-color: #ff00ff;
-            pointer-events: none;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        form textarea {
-            min-height: 150px;
-        }
-
-        button[type="submit"] {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-    </style>
+ 
 </head>
 <body>
     <!-- Add this right after <body> tag -->
@@ -143,40 +21,24 @@
     </nav>
     <div class="container">
         <section class="contact-section">
-            <h1>Get In Touch!</h1>
+            <h1>Let's Connect!</h1>
             
-            <form action="https://formsubmit.co/398bbe375341c1f1c25d1d7f3c83368b" method="POST">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                </div>
-
-                <!-- Anti-spam and configuration -->
-                <input type="hidden" name="_subject" value="New Contact Form Submission">
-                <input type="hidden" name="_captcha" value="false">
+            <div class="contact-content">
+                <p>I'm always interested in new opportunities and collaborations.</p>
+                <p>Feel free to reach out through any of these platforms:</p>
                 
-                <button type="submit">Send Message</button>
-            </form>
-
-            <h2>Find Me On:</h2>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/mcmatt42/" target="_blank" class="button">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 20px; vertical-align: middle;"> 
-                    LinkedIn
-                </a>
-                <a href="https://github.com/mcca0711" target="_blank" class="button">
-                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 20px; vertical-align: middle;"> 
-                    GitHub
-                </a>
-                <a href="mailto:orbit9112@gmail.com" class="button">
-                    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" style="width: 20px; vertical-align: middle;"> 
-                    Email
-                </a>
+                <div class="social-links">
+                    <h2>Find Me On:</h2>
+                    <a href="https://github.com/mcca0711" class="button" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/mcmatt42/" class="button" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="mailto:orbit9112@gmail.com" class="button" target="_blank">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
             </div>
         </section>
     </div>
