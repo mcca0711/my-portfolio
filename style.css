@@ -552,3 +552,10 @@ input, textarea {
         margin: 5px 0;
     }
 }
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds space between buttons */
+    margin-top: 15px; /* Adds some vertical spacing */
+}
